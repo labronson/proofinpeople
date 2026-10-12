@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Lauren Bronson | Proof in People</title>
+<meta name="description" content="Lauren Bronson finds the strongest human stories, earns the right to tell them, and builds the programs that carry them to the people who need to hear them.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#E3000B;--yellow:#FFCF00;--blue:#006CB7;
+  --ink:#05131E;--ink2:#0d2436;--paper:#FDFCF9;--paper2:#f2eee3;
+  --gray:#5a6672;--line:#e2ddd0;--w:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+::selection{background:var(--yellow);color:var(--ink)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,19,30,.97);backdrop-filter:blur(10px);padding:0 48px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.nl{font-family:'Poppins',sans-serif;font-weight:800;font-size:19px;color:var(--w);letter-spacing:-.02em;text-decoration:none}
+.nls{display:flex;gap:30px;list-style:none}
+.nls a{color:rgba(255,255,255,.72);text-decoration:none;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+.nls a:hover{color:var(--yellow)}
+
+/* HERO */
+.hero{min-height:92vh;background:var(--ink);display:flex;align-items:center;position:relative;overflow:hidden;padding:130px 80px 90px}
+.hero::before,.con::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:64px 64px;pointer-events:none}
+.hero::after{content:'';position:absolute;top:-160px;right:-120px;width:520px;height:520px;background:radial-gradient(circle,rgba(0,108,183,.22) 0%,transparent 70%);pointer-events:none}
+.hc{max-width:1060px;position:relative;z-index:1;animation:fadeUp 1s ease forwards}
+.hl{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow);margin-bottom:26px}
+.hero h1{font-family:'Poppins',sans-serif;font-size:clamp(42px,6.6vw,92px);font-weight:800;color:var(--w);line-height:1;margin-bottom:32px;letter-spacing:-.03em}
+.hero h1 .y{color:var(--yellow)}.hero h1 .r{color:var(--red)}
+.hd{font-size:19px;line-height:1.7;color:rgba(255,255,255,.72);max-width:680px;margin-bottom:44px;font-weight:300}
+.ha{display:flex;gap:16px;flex-wrap:wrap}
+.bp{background:var(--yellow);color:var(--ink);padding:15px 34px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:all .2s;display:inline-block;border-radius:4px}
+.bp:hover{transform:translateY(-3px);box-shadow:0 8px 0 -2px rgba(255,207,0,.35)}
+.bs{border:2px solid rgba(255,255,255,.28);color:var(--w);padding:13px 32px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:all .2s;display:inline-block;border-radius:4px}
+.bs:hover{border-color:var(--yellow);color:var(--yellow)}
+
+/* SECTIONS */
+.sec{padding:110px 80px}
+.sink{background:var(--ink)}.spaper{background:var(--paper)}.spaper2{background:var(--paper2)}
+.si{max-width:1200px;margin:0 auto}
+.shd{margin-bottom:52px}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
+.sink .eyebrow{color:var(--yellow)}
+.st{font-family:'Poppins',sans-serif;font-size:clamp(30px,4.2vw,50px);font-weight:800;line-height:1.08;letter-spacing:-.02em}
+.sink .st{color:var(--w)}
+.ss{font-size:17px;line-height:1.7;font-weight:300;margin-top:18px;max-width:1000px}
+.sink .ss{color:rgba(255,255,255,.66)}.spaper .ss,.spaper2 .ss{color:var(--gray)}
+
+/* SUBDIVIDER */
+.subdiv{margin:64px 0 28px;display:flex;align-items:center;gap:16px}
+.subdiv-label{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);white-space:nowrap}
+.sink .subdiv-label{color:var(--yellow)}
+.subdiv-line{flex:1;height:2px;background:var(--line)}
+.sink .subdiv-line{background:rgba(255,255,255,.12)}
+.subnote{font-size:16px;line-height:1.7;color:var(--gray);font-weight:300;max-width:1000px;margin:-10px 0 28px}
+.sink .subnote{color:rgba(255,255,255,.66)}
+
+/* DARK CARDS */
+.pg{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.pg + .pg{margin-top:20px}
+.pi{background:var(--ink2);border-radius:2px;overflow:hidden;transition:transform .28s,box-shadow .28s;position:relative;display:flex;flex-direction:column}
+.pi::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:var(--yellow);transform:scaleX(0);transform-origin:left;transition:transform .3s;z-index:3}
+.pi:hover::before{transform:scaleX(1)}
+.pi:hover{transform:translateY(-6px);box-shadow:0 18px 40px -12px rgba(0,0,0,.5)}
+.pi.s2{grid-column:span 2}.pi.s2 .inn{display:grid;grid-template-columns:1fr 1fr;height:100%}
+.it{width:100%;aspect-ratio:16/9;overflow:hidden;position:relative;background:#081a29;display:block;flex-shrink:0}
+.it img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92;transition:opacity .3s,transform .4s}
+.pi:hover .it img{opacity:1;transform:scale(1.04)}
+.s2 .it{aspect-ratio:unset;min-height:320px;height:100%}
+.tov{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,19,30,.45) 0%,transparent 55%);display:flex;align-items:center;justify-content:center}
+.pb{width:58px;height:58px;background:var(--yellow);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:opacity .25s,transform .25s;box-shadow:0 8px 22px rgba(0,0,0,.3);opacity:0;transform:scale(.9)}
+.pi:hover .pb,.it:focus-visible .pb{opacity:1;transform:scale(1.06)}
+.pb svg{width:18px;height:18px;fill:var(--ink);margin-left:3px}
+.ib{padding:30px 34px 32px;flex:1;display:flex;flex-direction:column}
+.itg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow);background:rgba(255,207,0,.1);padding:5px 12px;border-radius:2px;margin-bottom:14px;align-self:flex-start}
+.iti{font-family:'Poppins',sans-serif;font-size:22px;font-weight:700;color:var(--w);line-height:1.2;margin-bottom:6px;letter-spacing:-.01em}
+.isu{font-size:14px;color:var(--yellow);font-weight:500;margin-bottom:12px;line-height:1.5}
+.ide{font-size:15px;line-height:1.7;color:rgba(255,255,255,.66);font-weight:300;margin-bottom:18px;flex:1}
+.il{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--yellow);text-decoration:none;transition:gap .2s;align-self:flex-start}
+.il:hover{gap:13px}
+.ims{display:flex;gap:28px;flex-wrap:wrap;margin-bottom:20px}
+.mn{font-family:'Poppins',sans-serif;font-size:22px;font-weight:700;color:var(--yellow)}
+.ml{font-size:12px;color:rgba(255,255,255,.5);margin-top:2px}
+
+/* ROLE */
+.role{margin-top:24px;display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.role div{background:var(--w);border:1px solid var(--line);border-left:3px solid var(--yellow);padding:18px 22px}
+.role dt{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.role dd{font-size:15px;line-height:1.65;color:var(--gray)}
+
+/* PIVOT */
+.pivot{background:var(--w);border:1px solid var(--line);border-radius:2px;overflow:hidden}
+.pv-row{display:grid;grid-template-columns:1fr 1.3fr;background:var(--blue)}
+.pv{padding:34px;display:flex;flex-direction:column;gap:18px;justify-content:space-between}
+.pv + .pv{border-left:1px solid rgba(255,255,255,.14)}
+.pv .shot{flex:1;display:flex;align-items:center;justify-content:center;background:none;border:0;cursor:pointer;padding:0}
+.pv img{max-height:320px;width:auto;object-fit:contain;transition:transform .4s}
+.pv .shot:hover img{transform:scale(1.03)}
+.pv.letter img{box-shadow:0 16px 34px rgba(5,19,30,.35)}
+.pv figcaption{font-size:14px;line-height:1.6;color:rgba(255,255,255,.88)}
+.pv figcaption b{display:block;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow);margin-bottom:4px}
+.pv .doc{display:inline-block;margin-top:12px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--w);background:none;border:0;border-bottom:2px solid var(--yellow);padding:0 0 2px;cursor:pointer;font-family:inherit}
+.pv .doc:hover{color:var(--yellow)}
+.pv-body{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;padding:44px}
+.ctg{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.cti{font-family:'Poppins',sans-serif;font-size:28px;font-weight:800;color:var(--ink);line-height:1.15;margin-bottom:8px;letter-spacing:-.01em}
+.csu{font-size:15px;font-weight:600;color:var(--red);margin-bottom:16px}
+.cde{font-size:15px;line-height:1.75;color:var(--gray);font-weight:300;margin-bottom:14px}
+.wins{list-style:none;border-top:1px solid var(--line)}
+.wins li{padding:13px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.5;display:flex;gap:12px}
+.wins li::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--yellow);flex-shrink:0;margin-top:7px}
+.cls{display:flex;flex-direction:column;gap:10px;margin-top:22px;align-items:flex-start}
+.cl{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--red);text-decoration:none;transition:padding .2s;background:none;border:0;cursor:pointer;font-family:inherit;padding:0}
+.cl:hover{padding-left:4px}
+
+/* MEDIA GRID */
+.tv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
+.mi{background:var(--ink2);border-radius:2px;overflow:hidden;transition:transform .28s,box-shadow .28s;text-decoration:none;display:block}
+.mi:hover{transform:translateY(-6px);box-shadow:0 16px 36px -12px rgba(0,0,0,.5)}
+.mt{width:100%;aspect-ratio:16/9;overflow:hidden;position:relative;background:#081a29}
+.mt img{width:100%;height:100%;object-fit:cover;display:block;opacity:.88;transition:opacity .3s}
+.mi:hover .mt img{opacity:1}
+.mpl{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.mpb{width:46px;height:46px;background:var(--yellow);border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(.9);transition:opacity .25s,transform .25s}
+.mi:hover .mpb,.mi:focus-visible .mpb{opacity:1;transform:scale(1.06)}
+@media (hover:none){.pb,.mpb{opacity:1;transform:none}}
+.mcap{font-size:13px;color:rgba(255,255,255,.6);line-height:1.5;margin-top:6px}
+.mpb svg{width:15px;height:15px;fill:var(--ink);margin-left:2px}
+.mb{padding:18px 22px 22px}
+.mo{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow);margin-bottom:6px}
+.mti{font-family:'Poppins',sans-serif;font-size:18px;font-weight:700;color:var(--w);line-height:1.3}
+
+/* ABOUT */
+.ab{display:grid;grid-template-columns:1fr 1.55fr;gap:80px;align-items:start}
+.ab h2{font-family:'Poppins',sans-serif;font-size:clamp(30px,3.6vw,46px);font-weight:800;color:var(--ink);line-height:1.1;letter-spacing:-.02em}
+.ar p{font-size:17px;line-height:1.8;color:#39434d;margin-bottom:20px;font-weight:300}
+.ar p strong{color:var(--ink);font-weight:600}
+.arbar{width:56px;height:3px;margin-top:30px;background:linear-gradient(90deg,var(--red) 0 33%,var(--yellow) 33% 66%,var(--blue) 66% 100%)}
+.career{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;align-items:end;margin-top:80px;padding-top:44px;border-top:1px solid var(--line)}
+.ci{display:flex;flex-direction:column;align-items:center;gap:10px}
+.ci .logo{height:90px;display:flex;align-items:center;justify-content:center;width:100%}
+.ci img{max-height:90px;max-width:100%;width:auto;object-fit:contain}
+.ci span{font-size:13px;font-weight:500;color:var(--gray)}
+
+/* CLOSE */
+.con{background:var(--ink);padding:120px 80px;text-align:center;position:relative;overflow:hidden}
+.coni{max-width:760px;margin:0 auto;position:relative;z-index:1}
+.con h2{font-family:'Poppins',sans-serif;font-size:clamp(34px,5vw,58px);font-weight:800;color:var(--w);line-height:1.05;margin-bottom:22px;letter-spacing:-.02em}
+.con h2 em{font-style:normal;color:var(--yellow)}
+.con p{font-size:17px;line-height:1.75;color:rgba(255,255,255,.66);font-weight:300;margin-bottom:44px}
+.con p.sig{font-family:'Poppins',sans-serif;font-weight:700;font-size:19px;color:var(--w);margin-top:-20px}
+.ctl{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+footer{background:#030c14;padding:30px 80px;display:flex;justify-content:space-between;align-items:center}
+footer p{font-size:12px;color:rgba(255,255,255,.4)}
+.fl{font-family:'Poppins',sans-serif;font-weight:800;font-size:16px;color:rgba(255,255,255,.55)}
+
+/* LIGHTBOX */
+.lb{display:none;position:fixed;inset:0;background:rgba(5,19,30,.94);z-index:1000;align-items:center;justify-content:center;padding:56px 24px 24px}
+.lb.on{display:flex}
+.lbi{width:100%;max-width:1000px;height:86vh;position:relative}
+.lbx{position:absolute;top:-46px;right:0;color:rgba(255,255,255,.8);font-size:30px;line-height:1;cursor:pointer;background:none;border:none;padding:4px 8px}
+.lbx:hover{color:var(--yellow)}
+.lbi iframe{width:100%;height:100%;border:0;background:#fff;display:block;border-radius:4px}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.fi{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.fi.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.fi{opacity:1;transform:none}}
+
+@media(max-width:980px){
+  nav{padding:0 20px}.nls{display:none}
+  .hero{padding:110px 22px 70px;min-height:auto}
+  .sec{padding:76px 22px}
+  .pg{grid-template-columns:1fr}
+  .pi.s2{grid-column:span 1}.pi.s2 .inn{grid-template-columns:1fr}
+  .pi.s2 .inn .ib.first{order:2}
+  .s2 .it{min-height:0;height:auto;aspect-ratio:16/9}
+  .pv-row,.pv-body,.role{grid-template-columns:1fr}
+  .pv + .pv{border-left:0;border-top:1px solid rgba(255,255,255,.14)}
+  .pv-body{gap:28px;padding:30px 24px}
+  .ab{grid-template-columns:1fr;gap:32px}
+  .career{grid-template-columns:repeat(2,1fr);row-gap:36px;margin-top:56px}
+  .con{padding:80px 22px}
+  footer{padding:24px 22px;flex-direction:column;gap:10px;text-align:center}
+}
+@media(max-width:600px){
+  .tv-grid{grid-template-columns:1fr}
+  .ib{padding:26px 24px 28px}
+  .hd{font-size:17px}
+  .ci .logo,.ci img{max-height:64px;height:64px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nl" href="#top">Lauren Bronson</a>
+  <ul class="nls">
+    <li><a href="#work">Selected Work</a></li>
+    <li><a href="#build">Built From Scratch</a></li>
+    <li><a href="#media">Earned Media</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hc">
+    <div class="hl">Integrated Marketing &middot; Storytelling &middot; Partnerships</div>
+    <h1>People aren&rsquo;t a means to a story. They&rsquo;re the <span class="r">reason</span> <span class="y">for telling it.</span></h1>
+    <p class="hd">I find meaningful human stories and build the partnerships, programs, and experiences that help them travel.</p>
+    <div class="ha">
+      <a href="#work" class="bp">See the Work</a>
+      <a href="#about" class="bs">About Me</a>
+    </div>
+  </div>
+</section>
+
+<!-- SELECTED WORK -->
+<section id="work" class="sec spaper2">
+  <div class="si">
+    <div class="shd fi">
+      <div class="eyebrow">Selected Work</div>
+      <h2 class="st">Lead with impact. Earn the audience.</h2>
+      <p class="ss">I knew the USO could offer studios more than military access. It offered a credible way to tell an American story about service, gratitude, and the values that still connect us. I built a partner-funded model around that idea, and the studios and talent carried those stories far beyond the base.</p>
+    </div>
+
+    <div class="pg">
+      <div class="pi s2 fi">
+        <div class="inn">
+          <a href="https://www.youtube.com/watch?v=ymzLYEFU6wo" target="_blank" rel="noopener" class="it" aria-label="Watch the DOG video">
+            <img src="https://img.youtube.com/vi/ymzLYEFU6wo/maxresdefault.jpg" alt="Channing Tatum with service members for DOG">
+            <div class="tov"><div class="pb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+          </a>
+          <div class="ib">
+            <div class="itg">MGM Studios</div>
+            <h3 class="iti">Channing Tatum | DOG</h3>
+            <div class="isu">The campaign that established the model.</div>
+            <p class="ide">Two base visits, a virtual engagement with troops overseas, and a talent-signed donor campaign, each for a different audience. Every studio partnership that followed was built on what this one proved.</p>
+            <a href="https://www.youtube.com/watch?v=ymzLYEFU6wo" target="_blank" rel="noopener" class="il">Watch the video &#8594;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pi fi">
+        <a href="https://www.instagram.com/p/CmZ1yNiJ9mg/" target="_blank" rel="noopener" class="it" aria-label="View the Jack Ryan post">
+          <img src="https://thisisbronson.com/john.jpg" alt="John Krasinski visiting service members for Jack Ryan">
+          <div class="tov"><div class="pb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </a>
+        <div class="ib">
+          <div class="itg">Prime Video</div>
+          <h3 class="iti">John Krasinski | JACK RYAN</h3>
+          <div class="isu">Sincerity is what people remember.</div>
+          <p class="ide">A base visit built around the new season, shared across his channels and Prime Video&rsquo;s. His audience saw someone they trusted show up for the men and women who serve.</p>
+          <a href="https://www.instagram.com/p/CmZ1yNiJ9mg/" target="_blank" rel="noopener" class="il">View on Instagram &#8594;</a>
+        </div>
+      </div>
+
+      <div class="pi fi">
+        <a href="https://youtu.be/onSvz8VpzrY" target="_blank" rel="noopener" class="it" aria-label="Watch The Covenant video">
+          <img src="https://thisisbronson.com/jake.jpeg" alt="Jake Gyllenhaal with the USO for The Covenant">
+          <div class="tov"><div class="pb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </a>
+        <div class="ib">
+          <div class="itg">MGM Studios | Returning Partner</div>
+          <h3 class="iti">Jake Gyllenhaal | THE COVENANT</h3>
+          <div class="isu">They came back. That was the verdict.</div>
+          <p class="ide">MGM returned for a second partnership because the first one delivered for everyone at the table.</p>
+          <a href="https://youtu.be/onSvz8VpzrY" target="_blank" rel="noopener" class="il">Watch the video &#8594;</a>
+        </div>
+      </div>
+
+      <div class="pi fi">
+        <a href="https://www.youtube.com/shorts/JsVDMG4hESo" target="_blank" rel="noopener" class="it" aria-label="Watch The Bikeriders video">
+          <img src="https://thisisbronson.com/Bikeriders.png" alt="The Bikeriders cast with the military motorcycle community">
+          <div class="tov"><div class="pb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </a>
+        <div class="ib">
+          <div class="itg">Focus Features</div>
+          <h3 class="iti">Austin Butler, Jodie Comer &amp; Norman Reedus | THE BIKERIDERS</h3>
+          <div class="isu">Built with the community, not merely for it.</div>
+          <p class="ide">The military motorcycle community that lived the film&rsquo;s subject became part of the experience, not just its audience.</p>
+          <a href="https://www.youtube.com/shorts/JsVDMG4hESo" target="_blank" rel="noopener" class="il">Watch the video &#8594;</a>
+        </div>
+      </div>
+
+      <div class="pi fi">
+        <a href="https://www.instagram.com/p/DOL0C-GEdWt/" target="_blank" rel="noopener" class="it" aria-label="View the Dark Wolf post">
+          <img src="https://thisisbronson.com/wolf.png" alt="Taylor Kitsch with the 106th Rescue Wing for Dark Wolf">
+          <div class="tov"><div class="pb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </a>
+        <div class="ib">
+          <div class="itg">Prime Video | Third Collaboration</div>
+          <h3 class="iti">Taylor Kitsch | DARK WOLF</h3>
+          <div class="isu">Not a streak. A standing partnership.</div>
+          <p class="ide">Three integrations across three Prime Video titles, each building on the trust established before it.</p>
+          <a href="https://www.instagram.com/p/DOL0C-GEdWt/" target="_blank" rel="noopener" class="il">View on Instagram &#8594;</a>
+        </div>
+      </div>
+    </div>
+
+    <dl class="role fi">
+      <div><dt>My role</dt><dd>Designed the model and built every experience with each military installation, shaping moments between talent and service members that also told a compelling visual story. Prepared everyone for on-camera moments, led clearances, and moved content through approvals.</dd></div>
+      <div><dt>What it did</dt><dd>Turned a cost center into a partner-funded program studios came back to, with professionally produced content carrying each story to American audiences.</dd></div>
+    </dl>
+
+    <div class="subdiv fi"><div class="subdiv-label">Virtual Programming</div><div class="subdiv-line"></div></div>
+    <p class="subnote fi">A celebrity used to have to fly overseas to lift a deployed service member&rsquo;s spirits. Technology changed that. Virtual programming brought the people service members admire into their day, wherever they were stationed. I led talent partnerships for the program, connecting service members and military families with voices from entertainment, science, and education, and led the full program in its final season.</p>
+
+    <div class="pg">
+      <div class="pi s2 fi">
+        <div class="inn">
+          <div class="ib first">
+            <div class="itg">Deployed Service Members</div>
+            <h3 class="iti">Snoop Dogg</h3>
+            <div class="isu">Thirty minutes was enough.</div>
+            <p class="ide">He couldn&rsquo;t give us a week overseas. He could give us thirty minutes, so I built around that yes and brought him to deployed service members for an honest conversation about staying connected to home. People ran the clip as an exclusive, and it became one of the most impactful virtual events we ran. The experience stayed with Snoop and his team, and built the trust that opened the door to whatever we imagined next.</p>
+            <a href="https://youtu.be/hzhORnOuujM" target="_blank" rel="noopener" class="il">Watch the clip &#8594;</a>
+          </div>
+          <a href="https://youtu.be/hzhORnOuujM" target="_blank" rel="noopener" class="it" aria-label="Watch the Snoop Dogg clip">
+            <img src="https://thisisbronson.com/snoop.png" alt="Snoop Dogg on screen with deployed service members">
+            <div class="tov"><div class="pb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="pi fi">
+        <a href="https://youtu.be/0jWhANfyvTo" target="_blank" rel="noopener" class="it" aria-label="Watch the Dr. Jane Goodall clip">
+          <img src="https://thisisbronson.com/THL/assets/jane-goodall.png" alt="Dr. Jane Goodall speaking to military-connected students">
+          <div class="tov"><div class="pb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </a>
+        <div class="ib">
+          <div class="itg">Military-Connected Students</div>
+          <h3 class="iti">Dr. Jane Goodall</h3>
+          <div class="isu">A new audience, and the relationship that unlocked it.</div>
+          <p class="ide">Military-connected students were a community the USO had barely reached. I identified them, secured Dr. Goodall, and built the partnership with DoDEA, the Department of Defense school system.</p>
+          <div class="ims"><div><div class="mn">6,600+</div><div class="ml">Students joined live</div></div></div>
+          <a href="https://youtu.be/0jWhANfyvTo" target="_blank" rel="noopener" class="il">Watch the clip &#8594;</a>
+        </div>
+      </div>
+
+      <div class="pi fi">
+        <div class="it">
+          <img src="assets/ISS.PNG" alt="Col. Nick Hague floating aboard the International Space Station, waving to military-connected students">
+        </div>
+        <div class="ib">
+          <div class="itg">U.S. Space Force | STEM to Space</div>
+          <h3 class="iti">Live from the International Space Station</h3>
+          <div class="isu">One audience insight, built to scale.</div>
+          <p class="ide">The Goodall audience became a model. We partnered with the U.S. Space Force each year on STEM programming for military-connected students, and our last event went live from the International Space Station with Col. Nick Hague, joined by Bill Nye.</p>
+          <div class="ims"><div><div class="mn">3,300+</div><div class="ml">Students joined live</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUILT FROM SCRATCH -->
+<section id="build" class="sec spaper">
+  <div class="si">
+    <div class="shd fi">
+      <div class="eyebrow">Built From Scratch</div>
+      <h2 class="st">When the plan breaks, find the story.</h2>
+    </div>
+
+    <article class="pivot fi">
+      <div class="pv-row">
+        <figure class="pv">
+          <button class="shot" type="button" data-lb="https://thisisbronson.com/dunkin.pdf" aria-label="View the Dunkin' pitch"><img src="https://thisisbronson.com/cup.png" alt="Concept for a limited-edition PRESSURE and USO Dunkin' cup"></button>
+          <figcaption><b>The plan</b>PRESSURE &times; Dunkin&rsquo; &times; USO, a Memorial Day integration built around a limited-edition cup.
+            <br><button class="doc" type="button" data-lb="https://thisisbronson.com/dunkin.pdf">See the Dunkin&rsquo; pitch</button>
+          </figcaption>
+        </figure>
+        <figure class="pv letter">
+          <button class="shot" type="button" data-lb="assets/letters-home-proposal.pdf" aria-label="View the Letters Home proposal"><img src="https://thisisbronson.com/THL/assets/speedy-postcard-1942.jpg" alt="Handwritten USO postcard from Louis Speedy Weber, August 23, 1942"></button>
+          <figcaption><b>The pivot</b>Letters Home, World War II letters the USO had never shared publicly, paired with a mission immersion at Fort Campbell.
+            <br><button class="doc" type="button" data-lb="assets/letters-home-proposal.pdf">See the Letters Home proposal</button>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="pv-body">
+        <div>
+          <div class="ctg">Focus Features | PRESSURE</div>
+          <h3 class="cti">Letters Home</h3>
+          <div class="csu">When the talent couldn&rsquo;t travel, the story still could.</div>
+          <p class="cde">When world events made a talent-led military campaign impossible, I asked for a day and came back with a new plan. The USO held about 150 World War II letters from service members and their families that had never been shared with the public. I brought in Legacybox to digitize them at no cost and built a co-branded archive, with Andrew Scott reading a 1944 letter.</p>
+          <p class="cde">Focus Features funded the USO&rsquo;s first creator mission immersion, bringing 14 creators and media to Fort Campbell during Week of the Eagles to meet the 101st Airborne, the unit that parachuted into Normandy in the hours the film depicts.</p>
+        </div>
+        <div>
+          <ul class="wins">
+            <li>Washington Post feature on release day</li>
+            <li>Coverage in Variety and Stars and Stripes</li>
+            <li>A permanent public archive and the USO&rsquo;s first creator immersion</li>
+          </ul>
+          <div class="cls">
+            <a class="cl" href="https://www.uso.org/lettershome" target="_blank" rel="noopener">Explore the archive &#8594;</a>
+            <button class="cl" type="button" data-lb="https://thisisbronson.com/THL/assets/washington-post.pdf">Read the Washington Post feature &#8594;</button>
+            <a class="cl" href="https://variety.com/2026/film/news/pressure-andrew-scott-wwii-soldier-letter-uso-archive-1236745275/" target="_blank" rel="noopener">Read in Variety &#8594;</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- EARNED MEDIA -->
+<section id="media" class="sec sink">
+  <div class="si">
+    <div class="shd fi">
+      <div class="eyebrow">Earned Media</div>
+      <h2 class="st">Stories built to travel.</h2>
+      <p class="ss">An authentic experience gives a story somewhere to begin. The ones that travel are the ones that land, and remind us what we share.</p>
+    </div>
+
+    <div class="pg">
+      <div class="pi s2 fi">
+        <div class="inn">
+          <div class="it"><img src="https://thisisbronson.com/tgftr.jpeg" alt="The Great Food Truck Race finale with the USO in Norfolk"></div>
+          <div class="ib">
+            <div class="itg">Food Network | Season Finale</div>
+            <h3 class="iti">Tyler Florence | The Great Food Truck Race</h3>
+            <div class="isu">A relationship I refused to treat as one-time.</div>
+            <p class="ide">After one event, I saw Tyler&rsquo;s genuine connection to the military and a bigger opportunity in his show. When my team declined another engagement, I found a cost-neutral path and joined him at Fleet Week. I raised the idea early and let the day do the rest. By dinner, he suggested the series himself. I secured the producer introduction, wrote the creative brief, and pitched the concept.</p>
+            <div class="ims">
+              <div><div class="mn">Finale</div><div class="ml">Food Network placement</div></div>
+              <div><div class="mn">Ambassador</div><div class="ml">Tyler Florence, ongoing</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subdiv fi"><div class="subdiv-label">Make-A-Wish America</div><div class="subdiv-line"></div></div>
+    <p class="subnote fi">At Make-A-Wish, there was no room for error. A wish happens once. I designed each around the child while protecting everyone the moment touched &mdash; the family, the talent, the organization &mdash; so the joy landed and nothing was left to chance. When a wish also held a story worth telling, sharing it could extend the gift to millions.</p>
+
+    <div class="pg">
+      <div class="pi s2 fi">
+        <div class="inn">
+          <a href="https://www.youtube.com/watch?v=Oq2_h6KU4aw" target="_blank" rel="noopener" class="it" aria-label="Watch Cayden's wish">
+            <img src="https://thisisbronson.com/cayden.png" alt="Cayden's pop-star wish with Mario Lopez">
+            <div class="tov"><div class="pb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+          </a>
+          <div class="ib">
+            <div class="itg">Extra | Mario Lopez at The Grove</div>
+            <h3 class="iti">Cayden&rsquo;s Wish | Becoming a Pop Star</h3>
+            <div class="isu">He asked to be a pop star. I designed the wish to make him feel like one.</div>
+            <p class="ide">A pop-star day built around Cayden, from a cheering welcome and recording session at Red Bull Studios to a Macy&rsquo;s wardrobe, Maroon 5, and a live interview with Mario Lopez. Every partner helped make Cayden the star.</p>
+            <a href="https://www.youtube.com/watch?v=Oq2_h6KU4aw" target="_blank" rel="noopener" class="il">Watch the video &#8594;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tv-grid fi">
+      <a href="https://www.youtube.com/watch?v=5jT8Qef5Hf8" target="_blank" rel="noopener" class="mi">
+        <div class="mt"><img src="https://img.youtube.com/vi/5jT8Qef5Hf8/maxresdefault.jpg" alt="Katy Perry wish feature with Teen Vogue"><div class="mpl"><div class="mpb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+        <div class="mb"><div class="mo">Teen Vogue &times; Make-A-Wish</div><div class="mti">Katy Perry</div></div>
+      </a>
+      <a href="https://www.today.com/video/make-a-wish-foundation-makes-7-kids-dreams-come-true-at-grammys-1148418627524" target="_blank" rel="noopener" class="mi">
+        <div class="mt"><img src="https://thisisbronson.com/grammys.png" alt="Make-A-Wish kids at the GRAMMY Awards"><div class="mpl"><div class="mpb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+        <div class="mb"><div class="mo">NBC&rsquo;s Today</div><div class="mti">Wish Kids at the GRAMMYs</div><div class="mcap">The children were the story. The coverage became part of the wish.</div></div>
+      </a>
+      <a href="https://www.youtube.com/watch?v=QS4TyYWfui8" target="_blank" rel="noopener" class="mi">
+        <div class="mt"><img src="https://img.youtube.com/vi/QS4TyYWfui8/maxresdefault.jpg" alt="Justin Bieber wish feature with Teen Vogue"><div class="mpl"><div class="mpb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+        <div class="mb"><div class="mo">Teen Vogue &times; Make-A-Wish</div><div class="mti">Justin Bieber</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="sec spaper">
+  <div class="si">
+    <div class="ab">
+      <div class="fi">
+        <div class="eyebrow">About</div>
+        <h2>The same instinct,<br>every chapter.</h2>
+      </div>
+      <div class="ar fi">
+        <p>I&rsquo;ve always chased the work that pulls me in. The kind you can&rsquo;t put down, that earns your nights and weekends not because anyone asked, but because you can&rsquo;t stop thinking about it. It&rsquo;s how I became Vans Warped Tour&rsquo;s first intern after being told the tour didn&rsquo;t take interns. It led me to My Chemical Romance, and eventually to two missions I believed in enough to give more than eight years to each.</p>
+        <p>The settings changed, but the instinct didn&rsquo;t. I see what&rsquo;s possible before the pieces are in place, and I connect things most people treat as separate. Then I build it, because I&rsquo;ve never split strategy from execution. Done well, they&rsquo;re the same job.</p>
+        <p>I&rsquo;m at my best when the ambition is bigger than the resources. The strongest work finds where different interests point the same way, so everyone has a reason to make it bigger.</p>
+        <p>Underneath all of it, the work has to be true to the people it&rsquo;s for. A child, a service member, a fan, a customer, a community. <strong>Never a device, always the point.</strong> That&rsquo;s what turns a story into something people remember, and an organization into something people trust.</p>
+        <div class="arbar"></div>
+      </div>
+    </div>
+    <div class="career fi" aria-label="Career">
+      <div class="ci"><div class="logo"><img src="https://thisisbronson.com/warped-tour.png" alt="Vans Warped Tour"></div><span>2003&ndash;2005</span></div>
+      <div class="ci"><div class="logo"><img src="https://thisisbronson.com/my-chemical-romance.png" alt="My Chemical Romance"></div><span>2005&ndash;2009</span></div>
+      <div class="ci"><div class="logo"><img src="https://thisisbronson.com/make-a-wish.png" alt="Make-A-Wish"></div><span>2009&ndash;2018</span></div>
+      <div class="ci"><div class="logo"><img src="https://thisisbronson.com/uso.png" alt="USO"></div><span>2018&ndash;2026</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSE -->
+<section class="con" id="contact">
+  <div class="coni fi">
+    <h2>Let&rsquo;s build something<br><em>worth remembering.</em></h2>
+    <p>For 20 years, I&rsquo;ve found the human story and earned the right to tell it. My work has been with service members and children facing critical illness. Now I want to bring that experience to people whose lives are changing through AI. The most powerful stories will be about them, and what&rsquo;s become possible.</p>
+    <div class="ctl">
+      <a href="https://www.linkedin.com/in/laurenbronson" target="_blank" rel="noopener" class="bp">Connect on LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fl">Lauren Bronson</div>
+  <p>Prepared for OpenAI &middot; Integrated Marketing Manager, AI Impact</p>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Document viewer">
+  <div class="lbi">
+    <button type="button" class="lbx" id="lbx" aria-label="Close">&#x2715;</button>
+    <iframe id="lbf" title="Document" src="about:blank"></iframe>
+  </div>
+</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.fi');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});}
+  else{var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');o.unobserve(e.target);}})},{threshold:.08});
+  els.forEach(function(e){o.observe(e)});}
+
+  var lb=document.getElementById('lb'),fr=document.getElementById('lbf');
+  var small=window.matchMedia('(max-width:700px)');
+  document.querySelectorAll('[data-lb]').forEach(function(b){
+    b.addEventListener('click',function(e){
+      e.preventDefault();
+      var u=b.getAttribute('data-lb');
+      if(small.matches){window.open(u,'_blank','noopener');return;}
+      fr.src=u;lb.classList.add('on');document.body.style.overflow='hidden';
+      document.getElementById('lbx').focus();
+    });
+  });
+  function close(){lb.classList.remove('on');fr.src='about:blank';document.body.style.overflow='';}
+  document.getElementById('lbx').addEventListener('click',close);
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+</body>
+</html>
